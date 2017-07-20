@@ -1,0 +1,301 @@
+/***********************************************
+                  GENERAL
+/***********************************************/
+
+* { 
+  box-sizing: border-box;
+}
+  
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+  background: #f7f5f0;
+}
+
+a {
+  text-decoration: none;
+  color: #999;
+}
+a:hover {
+  color: #8c001a;
+}
+
+main{
+  margin: 30px auto 0;
+  padding-top: 20px;
+}
+
+p{
+  text-align: left;
+}
+
+.highlight{
+  color:#E74C3C; /*red*/
+}
+
+/***********************************************
+                NAVIGATION
+/***********************************************/
+
+/*Styling for navigation bar for all pages*/
+.main-nav {
+  width: 100%;
+  background: black;
+  min-height: 30px;
+  padding: 10px;
+  position:fixed;
+  text-align: center;
+  top:0px;
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 700;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  position:relative;
+}
+
+.nav .name {
+    display: block;
+    margin-right: auto;
+    color: #999;
+}
+.nav li {
+  padding: 5px 10px 10px 10px;
+}
+.nav a {
+  transition: all .5s;
+}
+.nav a:hover {
+  color: white;
+}
+
+.selected{
+  color: white;
+}
+
+/***********************************************
+                  HEADER
+/***********************************************/
+
+/*General Header Styling*/
+header {
+  line-height: 1.5;
+  padding-top: 60px;
+}
+
+/*Styles for home page header*/
+.home-header {
+  text-align: center;
+  background: url('images/canal.jpg') no-repeat top center ;
+  background-size: cover;
+  overflow: hidden;
+}
+
+header .profile-image {
+  margin-top: 50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 45%;
+  border: 5px solid white;
+  transition: all 1s;
+  background: #D6DBDF;
+}
+
+header .profile-image:hover {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.tag {
+  background-color:#D6DBDF;
+  color: black;
+  padding: 10px;
+  border: 3px solid white;
+  border-radius: 5px;
+  display: table;
+  margin: 10px auto;
+  font-family: 'Zilla Slab', serif;
+} 
+.location {
+  background-color: #D6DBDF;
+  border: 3px solid white;
+
+}
+
+/*End of Home Page Header Styling*/
+
+/*Styles for Experience page Header*/
+#exp-header{
+  border-bottom: 4px solid #ccc;
+  border-radius: 6px;
+  transition: all .5s;
+  max-width:75%;
+  margin:40px auto;
+  background-color: white; 
+  padding:20px;
+}
+
+#exp-header p{
+  text-align: left;
+}
+
+#exp-header:hover{
+  border-color: #8c001a;
+}
+
+/***********************************************
+                  MAIN
+/***********************************************/
+
+/*styling for the 'blocks' on all the pages*/
+.card {
+  margin: 30px;
+  padding: 20px 40px 40px;
+  max-width: 500px;
+  text-align: left;
+  background: #fff;
+  border-bottom: 4px solid #ccc;
+  border-radius: 6px;
+  transition: all .5s;
+ }
+
+.card:hover {
+  border-color: #8c001a;  /*dark red*/
+}
+
+/*styling for where coding languages appear*/
+ul.skills {
+  padding: 0;
+  text-align: center;
+}
+
+.skills li {
+  border-radius: 6px;
+  display: inline-block;
+  background: #8c001a;
+  color: white;
+  padding: 5px 10px;
+  margin: 2px;
+}
+
+/*styles for the images in the blocks on the home page*/
+.home{
+  display:block;
+  margin:auto;
+  border:4px solid #8c001a;
+  height:150px;
+}
+
+/*styles for contact info list in the block on the contact page*/
+#contact{
+  list-style: none;
+  line-height: 2em;
+  padding:20px;
+}
+
+
+
+
+/***********************************************
+                  FOOTER
+/***********************************************/
+
+footer {
+  width: 100%;
+  min-height: 30px;
+  padding: 20px 0 40px 20px;
+}
+
+footer .copyright {
+  top: -8px;
+  font-size: .55em;
+  text-align: center;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+a.social {
+  display: inline-block;
+  text-indent: -9999px;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  opacity: .4;
+  transition: all .5s;
+}
+a.twitter {
+  background-image: url(images/twitter.svg);
+}
+a.linkedin {
+  background-image: url(images/linkedin.svg);
+}
+a.github {
+  background-image: url(images/github.svg);
+}
+a.social:hover {
+  opacity: 1;
+}
+.clearfix {
+  clear: both;
+}
+
+
+/***********************************************
+           STYLES FOR LARGER SCREENS
+/***********************************************/
+
+@media screen and (min-width: 720px) {
+  
+  .flex {
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display:inline-block;
+    max-width: 1200px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+
+  /*styles the blocks on all pages in bigger views*/
+  .card {
+    margin: 30px;
+    padding: 20px 40px 40px;
+    max-width: 40%;
+    min-height: 520px;
+    display:inline-block;
+    vertical-align: top;
+  }
+
+  .home-header {
+    min-height: 470px;
+  }
+
+  .nav {
+    max-width: 1200px;
+    padding: 0 30px;
+  }
+
+  main p {
+    line-height: 1.6em;
+  }
+
+  footer {
+    font-size: 1.3em;
+    max-width: 1200px;
+    margin: 40px auto;
+  }
+
+}
